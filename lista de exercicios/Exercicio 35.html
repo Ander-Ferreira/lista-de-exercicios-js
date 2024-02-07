@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordem Crescente</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Digite vários números separados por virgula:</h1>
+    <input type="text" id="nmr">
+    <input type="button" value="Checar" onclick="ordem()">
+    <div id="resultado">Resultado</div>
+
+    <script>
+    function ordem() {
+        var input = document.getElementById('nmr').value;
+        var resultado = document.getElementById('resultado');
+        var meuArray = input.split(",");
+
+        meuArray.sort(function(a, b) {
+            return a - b;
+        });
+
+        resultado.innerHTML = `Números em ordem crescente: ${meuArray}`;
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 7</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function celFar() {
+
+      var C = document.getElementById("C");
+      //var F = document.getElementById("F"); 
+
+      var opera1 = +C.value;
+
+      var F = (9 * C.value + 160) / 5;
+
+
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "A temperatura convertida em " + C.value + "&nbsp" + "graus celsius " + "agora é: " + F + "&nbsp" + "fahrenheit";
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 7</h1>
+  Digite os graus Celsius para converter: <input type="number" id="C" size="5">
+  <input type="button" value="clique aqui" onclick="celFar()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

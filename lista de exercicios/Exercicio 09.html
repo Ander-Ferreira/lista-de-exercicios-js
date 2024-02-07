@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 9</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function depRen() {
+
+      var deposito = document.getElementById("deposito");
+      var meses = document.getElementById("meses");
+
+      var rend = deposito.value * 0.7 * meses.value / 100;
+
+      var opera1 = +deposito.value + rend;
+
+
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "Depois do rendimento você tem : " + opera1;
+
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 9</h1>
+  Digite seu depósito: <input type="number" id="deposito" size="5">
+  Quantos meses: <input type="number" id="meses" size="5">
+  <input type="button" value="clique aqui" onclick="depRen()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

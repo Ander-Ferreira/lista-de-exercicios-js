@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia da Semana</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Meses do ano</h1>
+    <input type="number" name="nmbr1" id="nmbr1">
+    <input type="button" value="Checar" onclick="mesANO()">
+    <div id="resultado">Digite números de 1 à 12 para mostrar os meses do ano!</div>
+
+    <script>
+        function mesANO() {
+            var agora = Number.parseInt(document.getElementById('nmbr1').value)
+            var resultado = document.getElementById('resultado');
+
+            resultado.innerHTML = `Olá, `
+
+            switch (agora) {
+
+                case 1:
+                    resultado.innerHTML += `É janeiro!`
+                    break
+                case 2:
+                    resultado.innerHTML += `É fevereiro!`
+                    break
+                case 3:
+                    resultado.innerHTML += `É março!`
+                    break
+                case 4:
+                    resultado.innerHTML += `É abril!`
+                    break
+                case 5:
+                    resultado.innerHTML += `É maio!`
+                    break
+                case 6:
+                    resultado.innerHTML += `É junho!`
+                    break
+                case 7:
+                    resultado.innerHTML += `É julho!`
+                    break
+                case 8:
+                    resultado.innerHTML += `É agosto`
+                    break
+                case 9:
+                    resultado.innerHTML += `É setembro!`
+                    break
+                case 10:
+                    resultado.innerHTML += `É outubro!`
+                    break
+                case 11:
+                    resultado.innerHTML += `É novembro!`
+                    break
+                case 12:
+                    resultado.innerHTML += `É Dezembro`
+                    break
+                default:
+                    resultado.innerHTML += `[ERRO] dia inexistente!`
+                    break
+            }
+        }
+
+    </script>
+</body>
+
+</html>

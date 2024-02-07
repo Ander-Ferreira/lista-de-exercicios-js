@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 11</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function taxaAli() {
+
+      var produto = document.getElementById("produto");
+
+      var preco = 15
+      var acr = 0.7
+
+      var opera1 = +produto.value * preco;
+
+      var opera2 = opera1 + acr * +produto.value;
+
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "O preço original do produto é: " + "R$" + opera1 + ", " + " com acréscimo de 0,70% por produto : " + "R$" + opera2;
+
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 11 </h1>
+  Quantidade de produtos: <input type="number" id="produto" size="5">
+  <input type="button" value="clique aqui" onclick="taxaAli()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

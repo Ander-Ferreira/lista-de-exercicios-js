@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 2</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function operacoes() {
+
+      var numero1 = document.getElementById("numero1");
+      var numero2 = document.getElementById("numero2");
+      var adicao = document.getElementById("adicao");
+      var subtracao = document.getElementById("subtracao");
+      var divisao = document.getElementById("divisao");
+      var multiplicacao = document.getElementById("multiplicacao");
+
+      var operacao1 = +numero1.value;
+      var operacao2 = +numero2.value;
+
+      var contaMais = operacao1 + operacao2;
+      var contaMenos = operacao1 - operacao2;
+      var contaDivi = operacao1 / operacao2;
+      var contaMulti = operacao1 * operacao2;
+
+      adicao.innerHTML = "Resultado da soma: " + contaMais;
+      subtracao.innerHTML = "Resultado da subtração: " + contaMenos;
+      divisao.innerHTML = "Resultado da Divisão: " + contaDivi;
+      multiplicacao.innerHTML = "Resultado da Multiplicação é: " + contaMulti;
+
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 2</h1>
+  Digite um número: <input type="number" id="numero1" size="5">
+  Digite um número: <input type="number" id="numero2" size="5">
+  <input type="button" value="clique aqui" onclick="operacoes()">
+  <p id="adicao"><i>resultado</i></p><br>
+  <p id="subtracao"><i>resultado</i></p><br>
+  <p id="divisao"><i>resultado</i></p><br>
+  <p id="multiplicacao"><i>resultado</i></p><br>
+
+
+
+</body>
+
+</html>

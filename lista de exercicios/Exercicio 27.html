@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 27</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Anderson da Silva Ferreira</h1>
+  <h1>Combustivel</h1>
+  <h2>Estão à venda apenas: uno, brazilha ou delrei</h2>
+  <input type="text" id="tex">
+  Gasolina: <input type="radio" name="checar" value="gasosa" onclick="calcularDesconto(event)">
+  Álcool: <input type="radio" name="checar" value="alcool" onclick="calcularDesconto(event)">
+  Diesel: <input type="radio" name="checar" value="diesel" onclick="calcularDesconto(event)">
+  <div id="resultado">Desconto</div>
+
+  <script>
+    var input = document.getElementById('tex');
+    var resultado = document.getElementById('resultado');
+
+    var carros = {
+      uno: {
+        precoOriginal: 100000,
+        comDesc: 0
+      },
+      brazilha: {
+        precoOriginal: 350000,
+        comDesc: 0
+      },
+      delrei: {
+        precoOriginal: 750000,
+        comDesc: 0
+      }
+    };
+
+    function calcularDesconto(event) {
+      event.preventDefault(); //nota mental para o futuro, esse evento previni que os botões se comportem de forma padrão, exemplo: cliquei no input type circle, ele me dará um valor, se eu clicar em outro type circle com uma function, ele não somará o valor dos dois ao chamar outra function  
+      var modelo = input.value.toLowerCase();
+      var desconto = 0;
+
+      if (modelo in carros) {
+        if (event.target.value === "gasosa") {
+          desconto = 0.25;
+        } else if (event.target.value === "alcool") {
+          desconto = 0.21;
+        } else if (event.target.value === "diesel") {
+          desconto = 0.14;
+        }
+
+        carros[modelo].comDesc = carros[modelo].precoOriginal * (1 - desconto);
+
+        resultado.innerHTML = `Preço original: R$ ${carros[modelo].precoOriginal.toFixed(2)} Preço com desconto: R$ ${carros[modelo].comDesc.toFixed(2)}`;
+      } else {
+        resultado.innerHTML = "PODE PARAR, A GENTE SÓ VENDE CARRÃO! MODELO INVÁLIDO!";
+      }
+    }
+  </script>
+</body>
+
+</html>

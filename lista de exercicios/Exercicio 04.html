@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercício 4</title>
+   <style type="text/css">
+      body {
+  
+  
+  
+        background-color: red;
+  
+      }
+    </style>
+    <h2>Nome: Anderson da Silva Ferreira</h2>
+    <h3>Turma: OADSNM1AC</h3>
+   <script language="javascript" type="text/javascript">
+      function salPe() {
+
+         var vendedor = document.getElementById("vendedor");
+         var sal = document.getElementById("sal");
+         var vendas = document.getElementById("vendas");
+
+         var desconto = 0.15;
+         var quinze = +vendas.value * desconto + +sal.value;
+         var resultado = document.getElementById("resultado");
+         resultado.innerHTML = vendedor.value + "&nbsp" + "Seu salário neste mês foi de: " + quinze;
+
+         if (quinze > 5000) {
+
+            resultado.innerHTML = vendedor.value + "&nbsp" + "dá dinheiro aí! Seu salário neste mês foi de: " + quinze;
+
+
+
+         }
+
+      }
+
+
+
+
+
+   </script>
+</head>
+
+<body>
+   <h1>Exercício 4</h1>
+   Digite seu nome: <input type="text" id="vendedor" size="15">
+   Digite seu salário: <input type="number" id="sal" size="5">
+   Digite suas vendas: <input type="number" id="vendas" size="5">
+   <input type="button" value="clique aqui" onclick="salPe()">
+   <br>
+   <p id="resultado"><i>Resultado</i></p>
+   </p>
+
+
+</body>
+
+</html>

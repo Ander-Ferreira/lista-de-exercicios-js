@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 14</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function maiorMENOR() {
+
+      var numero = document.getElementById("numero");
+      var numero2 = document.getElementById("numero2")
+      var resultado = document.getElementById("resultado")
+
+      if (numero.value > numero2.value) {
+
+        resultado.innerHTML = numero.value + " é maior que " + numero2.value;
+
+      }
+
+      else {
+
+        resultado.innerHTML = numero2.value + " é maior que " + numero.value;
+
+
+      }
+
+
+
+
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 14 </h1>
+  Digite um numero: <input type="number" id="numero" size="5">
+  Digite outro numero: <input type="number" id="numero2" size="5">
+  <input type="button" value="clique aqui" onclick="maiorMENOR()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

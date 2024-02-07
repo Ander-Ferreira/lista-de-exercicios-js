@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 1</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+
+
+  <script language="javascript" type="text/javascript">
+
+    function somade2() {
+
+      var soma1 = document.getElementById("soma1");
+      var soma2 = document.getElementById("soma2");
+      var adicao1 = +soma1.value;
+      var adicao2 = +soma2.value
+      var final = adicao1 + adicao2
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "O resultado é: " + final;
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 1</h1>
+  Digite um número: <input type="number" id="soma1" size="5">
+  Digite um número: <input type="number" id="soma2" size="5">
+  <input type="button" value="clique aqui" onclick="somade2()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora IMC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    Altura: <input type="number" id="altura">
+    Peso: <input type="number" id="peso">
+    Idade: <input type="number" id="idade">
+    Homem: <input type="checkbox" id="homem">
+    Mulher: <input type="checkbox" id="mulher">
+    <input type="button" value="Calcular" onclick="calculadora()"><br />
+    Resultado: <div id="resultado"></div>
+
+
+    <script>
+        function calculadora() {
+            var peso = document.getElementById('peso').value;
+            var altura = document.getElementById('altura').value / 100;
+            var idade = document.getElementById('idade').value;
+            var homem = document.getElementById('homem').checked;
+            var mulher = document.getElementById('mulher').checked;
+            var resultadoDiv = document.getElementById('resultado');
+
+            var texto = "";
+
+            if (homem === true) {
+                if (altura > 1.70 && idade <= 20) {
+                    var imc = altura * 72.7 - 58;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura > 1.70 && idade >= 39) {
+                    var imc = altura * 72.7 - 53;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura > 1.70 && idade >= 40) {
+                    var imc = altura * 72.7 - 45;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura <= 1.70 && idade <= 40) {
+                    var imc = altura * 72.7 - 50;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura <= 1.70 && idade > 40) {
+                    var imc = altura * 72.7 - 58;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else {
+                    texto = `Você está com sobrepeso!`;
+                }
+            } else if (mulher === true) {
+                if (altura > 1.50 && idade < 35) {
+                    var imc = altura * 62.1 - 44.7;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura <= 1.50 && idade >= 35) {
+                    var imc = altura * 62.1 - 45;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else if (altura <= 1.50 && idade < 35) {
+                    var imc = altura * 62.1 - 49;
+                    if (peso < imc) {
+                        texto = `Você está abaixo do peso ideal.`;
+                    } else if (peso > imc) {
+                        texto = `Você está acima do peso ideal.`;
+                    } else {
+                        texto = `Você está no peso ideal.`;
+                    }
+                } else {
+                    texto = `Você está com sobrepeso!`;
+                }
+            }
+
+            resultadoDiv.innerText = texto;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Exercício 32</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Anderson da Silva Ferreira</h1>
+  <h1>Soma com Operador</h1>
+
+  Digite o primeiro número: <input type="number" id="numero1">
+  Digite o operador +: <input type="text" id="operador">
+  Digite o segundo número: <input type="number" id="numero2">
+
+
+
+  <button onclick="calcular()">Calcular</button>
+
+  <div id="resultado"></div>
+
+  <script>
+    function calcular() {
+      var numero1 = Number.parseFloat(document.getElementById("numero1").value);
+      var numero2 = Number.parseFloat(document.getElementById("numero2").value);
+      var operador = document.getElementById("operador").value;
+      var res = document.getElementById("resultado");
+
+      var resultado;
+
+      if (operador === "+") {
+        resultado = numero1 + numero2;
+      } else {
+        resultado = "Erro de operador inválido,  reduzindo operação a  0";
+      }
+
+      res.innerHTML = `O resultado é ${resultado}`
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercício 5</title>
+   <style type="text/css">
+      body {
+  
+  
+  
+        background-color: red;
+  
+      }
+    </style>
+    <h2>Nome: Anderson da Silva Ferreira</h2>
+    <h3>Turma: OADSNM1AC</h3>
+   <script language="javascript" type="text/javascript">
+      function notasAluno() {
+
+         var aluno = document.getElementById("aluno");
+         var prova1 = document.getElementById("prova1");
+         var prova2 = document.getElementById("prova2");
+         var prova3 = document.getElementById("prova3");
+
+         var opera1 = +prova1.value;
+         var opera2 = +prova2.value;
+         var opera3 = +prova3.value;
+
+         var media = (opera1 + opera2 + opera3) / 3;
+
+         var resultado = document.getElementById("resultado");
+         resultado.innerHTML = aluno.value + "&nbsp" + "sua nota foi: " + media;
+
+         if (media < 5) {
+
+            resultado.innerHTML = aluno.value + "&nbsp" + "se lascou, sua nota foi: " + media;
+
+
+
+         }
+
+      }
+
+
+
+
+
+   </script>
+</head>
+
+<body>
+   <h1>Exercício 5</h1>
+   Digite seu nome: <input type="text" id="aluno" size="15">
+   Digite sua nota da prova 1: <input type="number" id="prova1" size="5">
+   Digite sua nota da prova 2: <input type="number" id="prova2" size="5">
+   Digite sua nota da prova 3: <input type="number" id="prova3" size="5">
+   <input type="button" value="clique aqui" onclick="notasAluno()">
+   <br>
+   <p id="resultado"><i>Resultado</i></p>
+   </p>
+
+
+</body>
+
+</html>

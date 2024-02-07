@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 25</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Igual ou Diferente</h1>
+    <h2>Digite números:</h2>
+    <input type="number" id="nmr">
+    <input type="number" id="nmr2">
+    <input type="button" value="Checar" onclick="igualDif()">
+    <div id="resultado">Resultado</div>
+
+    <script>
+        function igualDif() {
+
+            var input = Number.parseInt(document.getElementById('nmr').value);
+            var input2 = Number.parseInt(document.getElementById('nmr2').value);
+            var resultado = document.getElementById('resultado');
+
+            if (input !== input2) {
+
+
+                resultado.innerHTML = `É diferente!`
+
+
+            } else {
+
+                resultado.innerHTML = `É igual!`
+
+            }
+
+
+
+
+
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

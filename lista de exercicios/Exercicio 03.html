@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <style type="text/css">
+        body {
+    
+    
+    
+          background-color: red;
+    
+        }
+      </style>
+      <h2>Nome: Anderson da Silva Ferreira</h2>
+      <h3>Turma: OADSNM1AC</h3>
+    <script language="javascript" type="text/javascript">
+        function gasoKm() {
+
+            var km = document.getElementById("km");
+            var gaso = document.getElementById("gaso");
+            var opera1 = +km.value;
+            var opera2 = +gaso.value;
+            var distan = opera1 / opera2;
+            var resultado = document.getElementById("resultado");
+            resultado.innerHTML = "Seu consumo médio foi: " + distan;
+
+
+            if (distan > 100) {
+                resultado.innerHTML = "O combustível tá caro! Seu consumo médio foi: " + distan;
+
+
+
+
+            }
+        }
+
+
+
+
+
+    </script>
+</head>
+
+<body>
+    <h1>Exercício 3</h1>
+    Digite km: <input type="number" id="km" size="5">
+    Digite gasolina: <input type="number" id="gaso" size="5">
+    <input type="button" value="clique aqui" onclick="gasoKm()">
+    <br>
+    <p id="resultado"><i>Resultado</i></p>
+    </p>
+
+
+</body>
+
+</html>

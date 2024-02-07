@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 22</title>
+    <style type="text/css">
+        body {
+    
+    
+    
+          background-color: red;
+    
+        }
+      </style>
+      <h2>Nome: Anderson da Silva Ferreira</h2>
+      <h3>Turma: OADSNM1AC</h3>
+</head>
+<body>
+    <script language="javascript" type="text/javascript">
+        function essaFOIdificil() {
+            var display = document.getElementById("display");
+            display.innerHTML = "";
+            for (var i = 1; i <= 40; i++) {
+                var custo = parseFloat(document.getElementById("custo" + i).value);
+                var venda = parseFloat(document.getElementById("venda" + i).value);
+                var diferenca = venda - custo;
+                if (diferenca > 0) {
+                    display.innerHTML += "Produto " + i + ": Lucro de " + diferenca.toFixed(2) + "<br>";
+                } else if (diferenca < 0) {
+                    display.innerHTML += "Produto " + i + ": Prejuízo de " + diferenca.toFixed(2) + "<br>";
+                } else {
+                    display.innerHTML += "Produto " + i + ": Sem Venda<br>";
+                }
+            }
+        }
+    </script>
+
+    <h3>Insira o preço de custo e o preço de dos 40 produtos:</h3>
+    <form>
+        <table>
+            <tr>
+                <th>Produto</th>
+                <th>Preço de Custo</th>
+                <th>Preço de Venda</th>
+            </tr>
+            <script language="javascript" type="text/javascript">
+                for (var i = 1; i <= 40; i++) {
+                    document.write("<tr><td>" + i + "</td><td><input type='number' id='custo" + i + "'></td><td><input type='number' id='venda" + i + "'></td></tr>");
+                }
+            </script>
+        </table>
+    </form>
+    <br>
+    <input type="button" value="Calcular" onclick="essaFOIdificil()">
+    <p id="display"></p>
+</body>
+</html>

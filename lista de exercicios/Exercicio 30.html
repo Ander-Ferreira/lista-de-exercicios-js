@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 30</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Funcionários</h1>
+    <input type="text" id="nome" placeholder="Nome do funcionário">
+    <select id="sexo">
+        <option value="M">Masculino</option>
+        <option value="F">Feminino</option>
+    </select>
+    <input type="number" id="idade" placeholder="Idade do funcionário">
+    <input type="button" value="Adicionar Funcionário" onclick="adicionarFuncionario()">
+    <div id="resultado">Resultado</div>
+
+    <script>
+        var funcionarios = [];
+
+        function adicionarFuncionario() {
+            var nome = document.getElementById("nome").value;
+            var sexo = document.getElementById("sexo").value;
+            var idade = parseInt(document.getElementById("idade").value);
+
+            var abono = calcularAbono(sexo, idade);
+            var salario = calcularSalarioBase() + abono;
+
+            var funcionario = {
+                nome: nome,
+                sexo: sexo,
+                idade: idade,
+                salario: salario
+            };
+
+            funcionarios.push(funcionario);
+            exibirFuncionarios();
+        }
+
+        function calcularAbono(sexo, idade) {
+            if (sexo === "M") {
+                if (idade >= 30) {
+                    return 100;
+                } else {
+                    return 50;
+                }
+            } else {
+                if (idade >= 30) {
+                    return 200;
+                } else {
+                    return 80;
+                }
+            }
+        }
+
+        function calcularSalarioBase() {
+
+            return 1320;
+        }
+
+        function exibirFuncionarios() {
+            var resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.innerHTML = "";
+
+            for (var i = 0; i < funcionarios.length; i++) {
+                var funcionario = funcionarios[i];
+
+                resultadoDiv.innerHTML += "Nome: " + funcionario.nome + "<br>";
+                resultadoDiv.innerHTML += "Sexo: " + funcionario.sexo + "<br>";
+                resultadoDiv.innerHTML += "Idade: " + funcionario.idade + "<br>";
+                resultadoDiv.innerHTML += "Salário: R$ " + funcionario.salario + "<br>";
+                resultadoDiv.innerHTML += "---<br>";
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 24</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Recebendo Números</h1>
+    <h2>Digite números:</h2>
+    <input type="text" id="nmr">
+    <input type="button" value="Checar" onclick="numero()">
+    <div id="resultado"></div>
+
+    <script>
+        //Posso ter feito redundâncias, perdoai minha burrice mestre.
+        function numero() {
+            var input = document.getElementById('nmr').value;
+            var resultado = document.getElementById('resultado');
+            var numeros = [];
+            var mueArray = input.split(","); //Era pra ser meuArray, mas como fiquei 10 minutos caçando o erro e só depois percebi que era um erro de pt da minha parte, deixei como prova de minha burrice.
+
+
+            for (var c = 0; c < mueArray.length; c++) {
+                numeros[c] = Number.parseInt(mueArray[c]);
+
+                if (numeros[c] < 0) {
+                    resultado.innerHTML += ` ${numeros[c]} É Negativo! <br>`;
+                } else if (numeros[c] == 0) {
+                    resultado.innerHTML += `Contemple, isso é um Zero (👉ﾟヮﾟ)👉 ${numeros[c]}  <br>`;
+                } else {
+                    resultado.innerHTML += ` ${numeros[c]} É positivo igual minha nota, não é professor!? <br>`;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

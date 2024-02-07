@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Exercício 15</title>
+   <style type="text/css">
+      body {
+  
+  
+  
+        background-color: red;
+  
+      }
+    </style>
+    <h2>Nome: Anderson da Silva Ferreira</h2>
+    <h3>Turma: OADSNM1AC</h3>
+   <script language="javascript" type="text/javascript">
+      function interVALO() {
+
+         var numero = document.getElementById("numero");
+         var resultado = document.getElementById("resultado");
+
+         if (numero.value > 100 && numero.value < 200) {
+
+            resultado.innerHTML = numero.value + " está no intervalo ";
+
+         }
+
+         else {
+
+            resultado.innerHTML = numero.value + " não está no invervalo "
+
+         }
+
+
+
+
+
+
+      }
+
+
+
+
+
+   </script>
+</head>
+
+<body>
+   <h1>Exercício 15 </h1>
+   Digite um numero: <input type="number" id="numero" size="5">
+   <input type="button" value="clique aqui" onclick="interVALO()">
+   <br>
+   <p id="resultado"><i>Resultado</i></p>
+   </p>
+
+
+</body>
+
+</html>

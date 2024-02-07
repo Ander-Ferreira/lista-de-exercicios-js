@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17 modo Civilizado</title>
+
+    <style type="text/css">
+        body {
+    
+    
+    
+          background-color: red;
+    
+        }
+      </style>
+      <h2>Nome: Anderson da Silva Ferreira</h2>
+      <h3>Turma: OADSNM1AC</h3>
+
+    <script language="javascript" type="text/javascript">
+        function modoCivilizado() {
+            var botao = document.getElementById("opera1");
+            var opera1 = botao.value.split(" ");
+            var contador = 0;
+            for (var opera2 = 0; opera2 < opera1.length; opera2++) {
+
+                var numero = parseInt(opera1);
+
+                if (numero && numero >= 10 && numero <= 150) {
+                    contador++;
+
+
+
+                }
+
+
+
+            }
+
+            document.getElementById("resultado").value = contador++;
+
+
+        }
+
+
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+
+
+
+    <h1>Exercício 17 Modo Civilizado</h1>
+    Por favor coloque 80 números separados: <input type="text" id="opera1" name="opera1"><br />
+    Quantidade de números entre 10 && 150: <input type="text" id="resultado" name="resultado"><br />
+    <input type="button" value="Clique aqui" onclick="modoCivilizado()"><br />
+
+
+
+
+</body>
+
+</html>

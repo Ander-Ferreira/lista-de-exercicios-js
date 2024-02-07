@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 8</title>
+  <style type="text/css">
+    body {
+
+
+
+      background-color: red;
+
+    }
+  </style>
+  <h2>Nome: Anderson da Silva Ferreira</h2>
+  <h3>Turma: OADSNM1AC</h3>
+  <script language="javascript" type="text/javascript">
+    function realDol() {
+
+      var real = document.getElementById("real");
+      var dolar = document.getElementById("dolar");
+
+      var opera1 = +real.value / +dolar.value;
+
+
+
+      var resultado = document.getElementById("resultado");
+      resultado.innerHTML = "Seu valor convertido em dolar: " + opera1.toFixed(2);
+
+
+    }
+
+
+
+
+
+  </script>
+</head>
+
+<body>
+  <h1>Exercício 8</h1>
+  Digite o valor em real: <input type="number" id="real" size="15">
+  Quanto está valendo o dolar: <input type="number" id="dolar" size="5">
+  <input type="button" value="clique aqui" onclick="realDol()">
+  <br>
+  <p id="resultado"><i>Resultado</i></p>
+  </p>
+
+
+</body>
+
+</html>

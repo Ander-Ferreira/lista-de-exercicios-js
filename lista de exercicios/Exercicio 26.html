@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 26</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Anderson da Silva Ferreira</h1>
+    <h1>Por extenso</h1>
+    <h2>Clique e cheque:</h2>
+    <input type="button" value="Checar" onclick="porExt()">
+    <div id="resultado">Resultado<br /></div>
+
+    <script>
+        function porExt() {
+            var resultado = document.getElementById('resultado');
+            var mueArray = [1, 2, 3, 4, 5]
+
+            for (c = 0; c < mueArray.length; c++) {
+
+
+                switch (mueArray[c]) {
+                    case 1:
+                        resultado.innerHTML += `${mueArray[0]} - Um<br/>`
+                        break
+                    case 2:
+                        resultado.innerHTML += `${mueArray[1]} - Dois<br/>`
+                        break
+                    case 3:
+                        resultado.innerHTML += `${mueArray[2]} - Três<br/>`
+                        break
+                    case 4:
+                        resultado.innerHTML += `${mueArray[3]} - Quatro<br/>`
+                        break
+                    case 5:
+                        resultado.innerHTML += `${mueArray[4]} - Cinco<br/>`
+                        break
+                    default:
+                        resultado.innerHTML += `Fora do intervalo!`
+                        break
+
+                }
+
+
+            }
+
+
+
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

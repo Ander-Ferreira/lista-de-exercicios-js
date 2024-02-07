@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style type="text/css">
+      body {
+  
+  
+  
+        background-color: red;
+  
+      }
+    </style>
+    <h2>Nome: Anderson da Silva Ferreira</h2>
+    <h3>Turma: OADSNM1AC</h3> 
+
+    <script language="javascript" type="text/javascript">
+      function maiorMENOR() {
+        var nome = document.getElementById("nome").value;
+        var idade = document.getElementById("idade").value;
+        var saude = document.getElementById("saude").value;
+        var genero = document.getElementById("genero").value;
+        var display = document.getElementById("display");
+
+        if (idade >= 18 && saude === "boa" && genero === "masculino") {
+          display.innerHTML = nome + " Apto";
+        } else {
+          display.innerHTML = nome + " Não apto";
+        }
+      }
+    </script>
+
+    
+Nome: <input type ="text" id="nome" size="10">
+Idade: <input type="number" id="idade" />
+Gênero  <select id="genero">
+  <option value="masculino">Masculino</option>
+  <option value="feminino">Feminino</option>
+</select>
+Saúde: <select id="saude">
+  <option value="boa">Boa</option>
+  <option value="ruim">Ruim</option>
+</select><br />
+
+
+<p><input type = button value="Clique Aqui" onclick="maiorMENOR()"></p>
+
+<p id="display">Resultado</p>
+  </body>
+</html>
